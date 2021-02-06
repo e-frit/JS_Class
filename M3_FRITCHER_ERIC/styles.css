@@ -1,0 +1,62 @@
+h1 {
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+#link {
+    text-align: center;
+    font-size: 24px;
+}
+
+#header {
+    text-align: center;
+}
+
+.paragraphs {
+    margin: 15px;
+    padding: 5px;
+}
+
+#para1 {
+    background-color: teal;
+    color: black;
+    font-size: 28px;
+}
+
+#para2{
+    background-color: purple;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.list li {
+    font-size: 24px;
+}
+
+button{
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    background-color: blue;
+    color: white;
+}
+
+.remove-me {
+    border: 3px solid red;
+}
+
+.site-title{
+    text-decoration: underline;
+    color: forestgreen;
+}
+
+.menu li {
+    background-color: navy;
+    color: white;
+    font-size: 24px;
+}
