@@ -1,20 +1,21 @@
 /* Part 1    || use at least one of each of the following:
-getElementById() X
-getElementsByName()
-getElementsByTagName()
-getElementsByClassName
-querySelector() X
-*/
+getElementById()        X   line 12
+getElementsByName()     X        50
+getElementsByTagName()  X        40
+getElementsByClassName()X        47
+querySelector()         X         9   */
 
 // Part 2
+// get parent element of #current
 let currentIdNode = document.querySelector('#current');
-console.log(currentIdNode.parentNode);
+console.log(currentIdNode.parentElement);
 
+// log the first and last elements of the list
 let listIdNode = document.getElementById('menu');
 console.log(listIdNode.firstElementChild);
 console.log(listIdNode.lastElementChild);
 
-// same currentIdNode from before
+// log the next sibling element of #current
 console.log(currentIdNode.nextElementSibling);
 
 // Part 3
@@ -35,20 +36,30 @@ newDiv.appendChild(newHeader3);
 
 // modify list items
 listIdNode.replaceChild(replacedLi, listIdNode.firstElementChild);  // replace first list item
-listIdNode.removeChild(listIdNode.lastElementChild);  // remove last list item
+listIdNode.removeChild(listIdNode.lastElementChild);                // remove last list item
 listIdNode.insertBefore(extraLi, currentIdNode.nextElementSibling); // add "Extra 1" *before* Item 3
 // JavaScript DOM hasn’t supported the insertAfter() method yet. || :-\
-listIdNode.insertBefore(extra2Li, listIdNode.firstElementChild.nextSibling);  // add "Extra 2" *after* Item 1 [via adding before next sibling]
+listIdNode.insertBefore(extra2Li, listIdNode.getElementsByTagName('li')[1]);  // add "Extra 2" *after* Item 1 [via adding before next sibling]
 
 // Part 4
+// change button name attribute to 'send'
+let theButton = document.getElementById('btn');
+theButton.setAttribute('name', 'send');
+// log link target to console
+let linkNode = document.getElementsByClassName("remove-me")[0].firstElementChild;
+console.log(linkNode.getAttribute('href'));
+// enable button
+theButton.removeAttribute('disabled');
 
 
-/*
-• Part 4: Attributes
-◦ Use setAttribute on the button to give it the name “send”.
-◦ Use getAttribute on the link to get its target to print to the console.
-◦ Use removeAttribute() to make the button no longer disabled.
-• Part 5: Styles
-◦ Use getComputedStyle() to have the styles for #para1 alert to a window.
-◦ Use the className property to log the classes of #para2 to the console.
-*/
+// Part 5
+//alert with css style for para1
+let p1Style = getComputedStyle(document.getElementById('para1'));
+let message = "The following styles are applied to element 'para1': "+String.fromCharCode(10)+
+"background-color: "+p1Style.backgroundColor+String.fromCharCode(10)+
+"color: "+p1Style.color+String.fromCharCode(10)+
+"font-size: "+p1Style.fontSize;
+alert(message);
+
+// log classes for 'para2'
+console.log(document.getElementById('para2').className)
