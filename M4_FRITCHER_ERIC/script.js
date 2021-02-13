@@ -1,10 +1,9 @@
 /* Part 1
    Create a self-invoking function that writes into a heading*/
-var siteTitle = "Week 4 Practical";
 (function() {
+    let siteTitle = "Week 4 Practical";
     document.getElementById("site-name").innerHTML= siteTitle
 })();
-
 /* Part 2
 Create a variable titled ‘firstMessage’ and have it equal “I’m learning about functions.”
 Create a variable titled ‘secondMessage’ and have it equal “And also about libraries.”*/
