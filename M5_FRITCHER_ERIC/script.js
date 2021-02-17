@@ -1,9 +1,13 @@
 // Part 1: Build Arrays
 
 // Create an array that includes four different colors as strings
+colorStringArray = ["red", "orange", "yellow", "green"];
 // Create an array with five different foods as strings
+foodStringArray = ["pizza", "salad", "bacon", "pasta", "fruit"];
 // Create an array with six different animals as strings
+animalStringArray = ["cat","bat","dog","monkey","fish","bird"];
 // Create an array with all even numbers from 0 – 20.
+evenNumberArray = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 
 // Part 2: Array Methods
 
