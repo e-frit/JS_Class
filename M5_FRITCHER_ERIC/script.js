@@ -10,13 +10,28 @@ animalStringArray = ["cat","bat","dog","monkey","fish","bird"];
 evenNumberArray = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 
 // Part 2: Array Methods
-
+function divTextInjector(newArray) {     // I'm a sucker for a shortcut
+    let textToAdd = newArray
+    let newDiv = document.createElement("div")
+    document.body.appendChild(newDiv)
+    newDiv.innerHTML = textToAdd
+};
 // Use the toString method to have all of the colors write to the HTML
+divTextInjector(colorStringArray.toString());
 // Use the join method to have all of the colors write to the HTML with a separator
+divTextInjector(colorStringArray.join(", "));
 // Use the pop method on the animals array and have the array log to the console
+animalStringArray.pop(); //console.log(animalStringArray.pop()) returns only the popped item, not the array I want
+console.log(animalStringArray);
 // Use the push method to add a new animal to the animal array and have the array write to the HTML.
+animalStringArray.push("turtle"); //divTextInjector(animalStringArray.push("turtle")) only returns the number of items in the array
+divTextInjector(animalStringArray.join(", "));
 // Use the splice method to add three new foods to the food array. Have this write to the HTML.
+foodStringArray.splice(0, 0, "eggs", "cake", "bread")
+divTextInjector(foodStringArray.join(", "))
 // Use the slice method to move the 2nd, 3rd, and 4th foods into their own array. Have this write to the HTML.
+foodSubArray = foodStringArray.slice(1,4);
+divTextInjector(foodSubArray.join(", "));
 
 // Part 3: Array Sort and Iteration
 
