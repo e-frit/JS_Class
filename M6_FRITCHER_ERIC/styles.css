@@ -1,0 +1,25 @@
+h1 {
+    font-size: 40px;
+}
+
+#header {
+    text-align: center;
+}
+
+.paragraphs {
+    margin: 15px;
+    padding: 5px;
+}
+
+#para1 {
+    background-color: teal;
+    color: black;
+    font-size: 28px;
+}
+
+#para2{
+    background-color: purple;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
