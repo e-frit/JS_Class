@@ -52,8 +52,9 @@ var count = 5;
 /* Create a while loop that checks if “count” is less than 20
 and then writes to the HTML the number in the paragraph with the id “counter”.
 Have each iteration of the loop increase “count” by 3. */
-do {
-    document.getElementById("counter").innerHTML = "The current iteration of count is " + count;
-    count += 3
-}
-while (count < 20) 
+let text = ""
+while (count < 20) {
+    text += "The current iteration is " + count + "<br>";
+    count += 3;
+};
+document.getElementById("counter").innerHTML = text
